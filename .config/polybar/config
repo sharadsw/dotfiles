@@ -1,0 +1,191 @@
+[colors]
+black = #D92E3440
+white = ${xrdb:foreground}
+
+[bar/top]
+monitor = VGA1 
+
+width = 50%
+height = 30 
+offset-x = 25%
+offset-y = 15 
+
+background = ${colors.black}
+foreground = ${colors.white}
+
+underline-size = 2
+underline-color = ${colors.white}
+
+spacing = 0
+padding-left = 0
+padding-right = 0
+module-margin-left = 0 
+module-margin-right = 0
+
+font-0 = SFNS Display:antialias=false:size=11;2
+font-1 = FontAwesome:size=12;2
+font-2 = siji:pixelsize=10;0
+
+modules-left = bspwm
+modules-center = date
+modules-right = spotify volume redshift
+
+;tray-position = right
+;tray-padding = 2
+
+;separator = "   "
+
+wm-restack = bspwm
+
+[settings]
+;format-background = ${colors.black}
+
+; MODULES
+
+[module/bspwm]
+type = internal/bspwm
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-default = 
+
+format = <label-state> <label-mode>
+
+label-focused = %icon%
+label-focused-underline= #ddd
+label-focused-padding = 4
+label-focused-background = ${colors.black}
+
+label-occupied = %icon%
+label-occupied-padding = 4
+label-occupied-background = ${colors.black}
+
+label-urgent = %icon%
+label-urgent-padding = 4
+label-urgent-background = ${colors.black}
+
+label-empty = %icon%
+label-empty-background = ${colors.black}
+label-empty-foreground = #44ffffff
+label-empty-padding = 4
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:120:...%
+label-padding = 4
+
+[module/date]
+type = internal/date
+
+; Seconds to sleep between updates
+interval = 1.0
+
+date = "%a %b %d  - "
+
+time = %I:%M %p
+
+label = %date% %time%
+format ="  <label>"
+format-background = ${colors.black}
+;format-foreground = #333
+format-padding = 3
+
+[module/padding]
+type = custom/text
+content =  	 
+content-foreground = #00000000
+content-background = #11000000
+
+[module/battery]
+type = internal/battery
+
+full-at = 99
+
+battery = BAT0
+adapter = AC0
+
+poll-interval = 5
+
+format-charging = <animation-charging>  <label-charging>
+format-discharging = <ramp-capacity>  <label-discharging>
+format-full = <ramp-capacity>  <label-full>
+label-charging = %percentage%
+label-discharging = %percentage%
+label-full = %percentage%
+format-charging-padding = 3
+format-discharging-padding = 3
+format-full-padding = 3
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate = 750
+
+[module/backlight]
+type = internal/backlight
+
+card = intel_backlight
+enable-scroll = true
+
+format = <ramp> <label>
+label = %percentage%
+
+ramp-0 = 🌕
+ramp-1 = 🌔
+ramp-2 = 🌓
+ramp-3 = 🌒
+ramp-4 = 🌑
+
+[module/volume]
+type = internal/volume
+
+format-volume = <ramp-volume> <label-volume>
+format-muted = <label-muted>
+
+label-volume = %percentage% %
+
+label-muted =   muted
+label-muted-foreground = #aaa
+
+format-volume-padding = 3
+format-muted-padding = 3
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-headphones-0 = 
+
+[module/spotify]
+type = custom/script
+
+exec = ~/.config/polybar/spotify.sh 
+interval = 1
+
+format = <label>   
+format-background = ${colors.black}
+;format-foreground = #fff
+format-padding = 3
+
+label =    %output:0:45:...%
+
+click-left = playerctl play-pause
+click-middle = playerctl next
+click-right = playerctl previous
+
+[module/redshift]
+type = custom/script
+exec = ~/.config/polybar/redshift-temperature.sh
+interval = 5
+
+format-padding = 5
