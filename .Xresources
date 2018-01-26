@@ -69,10 +69,10 @@ rofi.fullscreen: true
 ! rofi.display-combi: myprompt
 rofi.color-enabled: true
 ! rofi.separator-style: none
-rofi.color-window: argb:DA222222, argb:DA222222, argb:00222222
-rofi.color-normal: argb:00000000, #e8e8e8, argb:00000000, argb:00000000, #e56aef
-rofi.color-urgent: argb:00000000, #f43753, argb:00000000, argb:00000000, #e56aef
-rofi.color-active: argb:00000000, #49bbfb, argb:00000000, argb:00000000, #e56aef
+rofi.color-window: argb:B3222222, argb:B3222222, argb:B3222222
+rofi.color-normal: argb:00000000, nord4, argb:00000000, argb:00000000, nord10
+rofi.color-urgent: argb:00000000, nord11, argb:00000000, argb:00000000, nord10
+rofi.color-active: argb:00000000, nord10, argb:00000000, argb:00000000, nord10
 
 rofi.font: System San Francisco Display 20
 ! rofi.font: Quicksand 20
