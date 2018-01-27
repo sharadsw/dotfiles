@@ -1,20 +1,21 @@
 [colors]
-black = #D92E3440
+black = ${xrdb:background}
 white = ${xrdb:foreground}
+blue  = ${xrdb:color4}
 
 [bar/top]
 monitor = VGA1 
 
-width = 50%
-height = 30 
-offset-x = 25%
-offset-y = 15 
+width = 100%
+height = 40 
+offset-x = 0
+offset-y = 0 
 
 background = ${colors.black}
 foreground = ${colors.white}
 
 underline-size = 2
-underline-color = ${colors.white}
+underline-color = ${colors.blue}
 
 spacing = 0
 padding-left = 0
@@ -28,7 +29,7 @@ font-2 = siji:pixelsize=10;0
 
 modules-left = bspwm
 modules-center = date
-modules-right = spotify volume redshift
+modules-right = spotify volume
 
 ;tray-position = right
 ;tray-padding = 2
