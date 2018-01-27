@@ -69,7 +69,7 @@ rofi.fullscreen: true
 ! rofi.display-combi: myprompt
 rofi.color-enabled: true
 ! rofi.separator-style: none
-rofi.color-window: argb:B3222222, argb:B3222222, argb:B3222222
+rofi.color-window: argb:B3222222, argb:B3222222, argb:00222222
 rofi.color-normal: argb:00000000, nord4, argb:00000000, argb:00000000, nord10
 rofi.color-urgent: argb:00000000, nord11, argb:00000000, argb:00000000, nord10
 rofi.color-active: argb:00000000, nord10, argb:00000000, argb:00000000, nord10
