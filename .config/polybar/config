@@ -1,21 +1,23 @@
 [colors]
-black = ${xrdb:background}
-white = ${xrdb:foreground}
-blue  = ${xrdb:color4}
+black  = ${xrdb:background}
+white  = ${xrdb:foreground}
+blue   = ${xrdb:color4}
+red    = ${xrdb:color1}
+pink   = ${xrdb:color13}
+green  = ${xrdb:color2}
+yellow = ${xrdb:color3}
 
 [bar/top]
-monitor = VGA1 
-
 width = 100%
 height = 40 
 offset-x = 0
 offset-y = 0 
+;radius = 6.0
 
 background = ${colors.black}
 foreground = ${colors.white}
 
-underline-size = 2
-underline-color = ${colors.blue}
+line-size = 4
 
 spacing = 0
 padding-left = 0
@@ -23,42 +25,36 @@ padding-right = 0
 module-margin-left = 0 
 module-margin-right = 0
 
-font-0 = SFNS Display:antialias=false:size=11;2
+font-0 = SFNS Display:antialias=true:size=11;2
 font-1 = FontAwesome:size=12;2
-font-2 = siji:pixelsize=10;0
 
-modules-left = bspwm
-modules-center = date
-modules-right = spotify volume
+modules-left = xworkspaces xwindow
+modules-center = spotify
+modules-right = volume date
 
 ;tray-position = right
 ;tray-padding = 2
 
 ;separator = "   "
 
-wm-restack = bspwm
+;wm-restack = bspwm
 
-[settings]
-;format-background = ${colors.black}
+[module/xworkspaces]
+type = internal/xworkspaces
 
-; MODULES
+icon-0 = 1;
+icon-1 = 2;
+icon-2 = 3;
+icon-3 = 4;
+icon-4 = 5;
+icon-default = 
 
-[module/bspwm]
-type = internal/bspwm
+format = <label-state>
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-default = 
-
-format = <label-state> <label-mode>
-
-label-focused = %icon%
-label-focused-underline= #ddd
-label-focused-padding = 4
-label-focused-background = ${colors.black}
+label-active = %icon%
+label-active-underline= ${colors.red}
+label-active-padding = 4
+label-active-background = ${colors.black}
 
 label-occupied = %icon%
 label-occupied-padding = 4
@@ -75,30 +71,26 @@ label-empty-padding = 4
 
 [module/xwindow]
 type = internal/xwindow
+
 label = %title:0:120:...%
 label-padding = 4
 
 [module/date]
 type = internal/date
 
-; Seconds to sleep between updates
 interval = 1.0
 
-date = "%a %b %d  - "
-
+date = %a %b %d
 time = %I:%M %p
 
-label = %date% %time%
-format ="  <label>"
-format-background = ${colors.black}
-;format-foreground = #333
-format-padding = 3
+label = %date% - %time%
 
-[module/padding]
-type = custom/text
-content =  	 
-content-foreground = #00000000
-content-background = #11000000
+format-prefix = "  "
+format-prefix-foreground = ${colors.yellow}
+
+format = <label>
+format-background = ${colors.black}
+format-padding = 4
 
 [module/battery]
 type = internal/battery
@@ -151,17 +143,18 @@ ramp-4 = 🌑
 [module/volume]
 type = internal/volume
 
-format-volume = <ramp-volume> <label-volume>
+format-volume = "<ramp-volume>  <label-volume>"
 format-muted = <label-muted>
 
-label-volume = %percentage% %
+label-volume = %percentage%%
 
-label-muted =   muted
+label-muted =  
 label-muted-foreground = #aaa
 
-format-volume-padding = 3
-format-muted-padding = 3
+format-volume-padding = 0
+format-muted-padding = 4
 
+ramp-volume-foreground = ${colors.green}
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
@@ -173,20 +166,18 @@ type = custom/script
 exec = ~/.config/polybar/spotify.sh 
 interval = 1
 
-format = <label>   
+label = %output%
+
+format-prefix = "  "
+format-prefix-foreground = ${colors.pink} 
+
+format = <label>
 format-background = ${colors.black}
 ;format-foreground = #fff
 format-padding = 3
-
-label =    %output:0:45:...%
 
 click-left = playerctl play-pause
 click-middle = playerctl next
 click-right = playerctl previous
 
-[module/redshift]
-type = custom/script
-exec = ~/.config/polybar/redshift-temperature.sh
-interval = 5
-
-format-padding = 5
+; vim:ft=dosini

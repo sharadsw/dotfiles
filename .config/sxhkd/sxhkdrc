@@ -64,7 +64,7 @@ super + ctrl + {Left,Down,Up,Right}
 
 # cycle windows in current desktop
 super + {_,shift + }Tab
-    bspc node -f {next,prev}.local
+	bspc node -f {next,prev}.local
 
 # focus/move the node in the given direction
 super + {_,shift + }{Left,Down,Up,Right}
@@ -72,7 +72,7 @@ super + {_,shift + }{Left,Down,Up,Right}
 
 # focus or send to desktop
 super + {_,shift + }{1-6}
-    bspc {desktop -f,node -d} ^{1-6}
+	bspc {desktop -f,node -d} ^{1-6}
 
 # change node layer
 super + {q,a,z}}

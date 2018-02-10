@@ -1,0 +1,6 @@
+nitrogen --restore
+polybar top &
+compton &
+lxpolkit &
+redshift &
+xautolock -time 15 -locker "lock -f SFNS-Display" &
