@@ -20,7 +20,7 @@
   </placement>
   <theme>
     <name>Arc-Mod</name>
-    <titleLayout>LC</titleLayout>
+    <titleLayout>C</titleLayout>
     <cornerRadius>8</cornerRadius>
     <keepBorder>no</keepBorder>
     <animateIconify>no</animateIconify>
@@ -35,6 +35,27 @@
       <size>10</size>
       <weight>Normal</weight>
       <slant>Normal</slant>
+    </font>
+    <font place="MenuHeader">
+      <name>Sans</name>
+      <size>8</size>
+      <weight/>
+      <slant/>
+    </font>
+    <font place="MenuItem">
+      <name>Sans</name>
+      <size>8</size>
+      <weight/>
+      <slant/>
+    </font>
+    <font place="ActiveOnScreenDisplay">
+      <name/>
+    </font>
+    <font place="InactiveOnScreenDisplay">
+      <name>Sans</name>
+      <size>8</size>
+      <weight/>
+      <slant/>
     </font>
   </theme>
   <desktops>
@@ -186,17 +207,47 @@
     <keybind key="W-c">
       <action name="MoveToCenter"/>
     </keybind>
-    <keybind key="W-Left">
+    <keybind key="W-S-Left">
       <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo"><x>26</x><y>2%</y><height>96%</height><width>48%</width></action>
+      <action name="MoveResizeTo">
+        <x>26</x>
+        <y>2%</y>
+        <height>96%</height>
+        <width>48%</width>
+      </action>
     </keybind>
-    <keybind key="W-Right">
+    <keybind key="W-S-Right">
       <action name="UnmaximizeFull"/>
-      <action name="MoveResizeTo"><x>-26</x><y>2%</y><height>96%</height><width>48%</width></action>
+      <action name="MoveResizeTo">
+        <x>-26</x>
+        <y>2%</y>
+        <height>96%</height>
+        <width>48%</width>
+      </action>
     </keybind>
     <keybind key="W-S-e">
       <action name="Execute">
         <command>openbox --exit</command>
+      </action>
+    </keybind>
+    <keybind key="W-Right">
+      <action name="DirectionalCycleWindows">
+        <direction>right</direction>
+      </action>
+    </keybind>
+    <keybind key="W-Left">
+      <action name="DirectionalCycleWindows">
+        <direction>left</direction>
+      </action>
+    </keybind>
+    <keybind key="W-Up">
+      <action name="DirectionalCycleWindows">
+        <direction>up</direction>
+      </action>
+    </keybind>
+    <keybind key="W-Down">
+      <action name="DirectionalCycleWindows">
+        <direction>down</direction>
       </action>
     </keybind>
   </keyboard>
@@ -370,6 +421,35 @@
       </mousebind>
     </context>
   </mouse>
-  <applications>  
+  <applications>
+    <application name="Navigator">
+      <desktop>1</desktop>
+    </application>
+    <application name="emacs">
+      <desktop>2</desktop>
+    </application>
+    <application name="discord">
+      <desktop>3</desktop>
+    </application>
+    <application name="Steam">
+      <desktop>4</desktop>
+    </application>
+    <application name="steam.exe">
+      <desktop>4</desktop>
+    </application>
+    <application name="spotify">
+      <desktop>5</desktop>
+    </application>
   </applications>
+  <dock>
+    <position>TopLeft</position>
+    <floatingX>0</floatingX>
+    <floatingY>0</floatingY>
+    <stacking>Above</stacking>
+    <direction>Vertical</direction>
+    <noStrut>no</noStrut>
+    <autoHide>no</autoHide>
+    <hideDelay>300</hideDelay>
+    <showDelay>300</showDelay>
+  </dock>
 </openbox_config>

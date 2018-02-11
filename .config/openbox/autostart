@@ -1,5 +1,7 @@
 nitrogen --restore
-polybar top &
+tint2 &
+pa-applet &
+nm-applet &
 compton &
 lxpolkit &
 redshift &
