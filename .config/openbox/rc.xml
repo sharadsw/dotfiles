@@ -6,7 +6,7 @@
   </resistance>
   <focus>
     <focusNew>yes</focusNew>
-    <followMouse>yes</followMouse>
+    <followMouse>no</followMouse>
     <focusLast>no</focusLast>
     <underMouse>yes</underMouse>
     <focusDelay>0</focusDelay>
@@ -439,6 +439,9 @@
     </application>
     <application name="spotify">
       <desktop>5</desktop>
+    </application>
+    <application name="gimp*">
+      <desktop>6</desktop>
     </application>
   </applications>
   <dock>
