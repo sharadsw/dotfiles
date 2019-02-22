@@ -4,7 +4,7 @@
 #-------------------------------------
 # Backgrounds
 # Background 1: Panel, Tooltip
-rounded = 8
+rounded = 0
 border_width = 0
 border_sides = TBLR
 background_color = #2b303b 85
@@ -17,7 +17,7 @@ border_color_pressed = #2b303b 30
 # Background 2: Iconified task
 rounded = 0
 border_width = 1
-border_sides = B
+border_sides = 
 background_color = #393939 0
 border_color = #666666 100
 background_color_hover = #aaaaaa 0
@@ -28,8 +28,8 @@ border_color_pressed = #666666 100
 # Background 3: Active task
 rounded = 0
 border_width = 1
-border_sides = B
-background_color = #393939 0
+border_sides = 
+background_color = #2b303b 100
 border_color = #ffffff 100
 background_color_hover = #aaaaaa 0
 border_color_hover = #ffffff 100
@@ -60,9 +60,9 @@ border_color_pressed = #000000 100
 
 #-------------------------------------
 # Panel
-panel_items = :SEC:
-panel_size = 30% 40
-panel_margin = 20 20
+panel_items = TSEC:
+panel_size = 100% 40
+panel_margin = 0 0
 panel_background_id = 1
 panel_padding = 2 0 8
 wm_menu = 1
@@ -85,7 +85,7 @@ panel_shrink = 0
 
 #-------------------------------------
 # Taskbar
-taskbar_mode = multi_desktop
+taskbar_mode = single_desktop
 taskbar_hide_if_empty = 0
 taskbar_padding = 8 0 8
 taskbar_background_id = 0
@@ -111,7 +111,7 @@ task_text = 1
 task_icon = 0
 task_centered = 1
 urgent_nb_of_blink = 100000
-task_maximum_size = 1 50
+task_maximum_size = 180 50
 task_padding = 12 4 4
 task_font = SFNS Display 11
 task_tooltip = 0
@@ -158,7 +158,7 @@ clock_dwheel_command =
 #-------------------------------------
 # Executor 1
 execp = new
-execp_command = if [[ "$(playerctl status)" == "Playing" ]]; then echo "   $(playerctl metadata xesam:artist) - <b>$(playerctl metadata xesam:title | awk '{if (length($0) > 15) {print substr($0, 0, 12)"..."} else print $0}')</b>"; elif [ "$(playerctl status)" == "Paused" ]; then echo "   Paused"; else echo "   No Track"; fi
+execp_command = if [[ "$(playerctl status)" == "Playing" ]]; then echo "   $(playerctl metadata xesam:artist) - <b>$(playerctl metadata xesam:title)</b>"; elif [ "$(playerctl status)" == "Paused" ]; then echo "   Paused"; else echo "   No Track"; fi
 execp_interval = 1
 execp_has_icon = 0
 execp_cache_icon = 1

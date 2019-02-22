@@ -1,5 +1,5 @@
 [colors]
-black  = ${xrdb:background}
+black  = #aa222222
 white  = ${xrdb:foreground}
 blue   = ${xrdb:color4}
 red    = ${xrdb:color1}
@@ -25,12 +25,12 @@ padding-right = 0
 module-margin-left = 0 
 module-margin-right = 0
 
-font-0 = SFNS Display:antialias=true:size=11;2
-font-1 = FontAwesome:size=12;2
+font-0 = Roboto Mono Medium:size=10;2
+font-1 = FontAwesome:size=9;2
 
-modules-left = xworkspaces xwindow
-modules-center = spotify
-modules-right = volume date
+modules-left = spotify
+modules-center = date
+modules-right = volume time
 
 ;tray-position = right
 ;tray-padding = 2
@@ -80,17 +80,32 @@ type = internal/date
 
 interval = 1.0
 
-date = %a %b %d
-time = %I:%M %p
+date = "%a, %b %d"
 
-label = %date% - %time%
+label = %date%
 
-format-prefix = "  "
-format-prefix-foreground = ${colors.yellow}
+;format-prefix = " "
+format-prefix-foreground = ${colors.blue}
 
 format = <label>
 format-background = ${colors.black}
-format-padding = 4
+format-padding = 2
+
+[module/time]
+type = internal/date
+
+interval = 1.0
+
+time = %I:%M %p
+
+label = %time%
+
+format-prefix = " "
+format-prefix-foreground = ${colors.blue}
+
+format = <label>
+format-background = ${colors.black}
+format-padding = 2
 
 [module/battery]
 type = internal/battery
@@ -143,7 +158,7 @@ ramp-4 = 🌑
 [module/volume]
 type = internal/volume
 
-format-volume = "<ramp-volume>  <label-volume>"
+format-volume = "<ramp-volume> <label-volume>"
 format-muted = <label-muted>
 
 label-volume = %percentage%%
@@ -152,9 +167,9 @@ label-muted = 
 label-muted-foreground = #aaa
 
 format-volume-padding = 0
-format-muted-padding = 4
+format-muted-padding = 2
 
-ramp-volume-foreground = ${colors.green}
+ramp-volume-foreground = ${colors.blue}
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
@@ -168,13 +183,13 @@ interval = 1
 
 label = %output%
 
-format-prefix = "  "
-format-prefix-foreground = ${colors.pink} 
+format-prefix = " "
+format-prefix-foreground = ${colors.blue} 
 
 format = <label>
 format-background = ${colors.black}
 ;format-foreground = #fff
-format-padding = 3
+format-padding = 2
 
 click-left = playerctl play-pause
 click-middle = playerctl next
