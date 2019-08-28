@@ -1,0 +1,52 @@
+configuration {
+
+display-drun: "❱";
+show-icons: true;
+
+}
+
+* {
+
+     font: "SFNS Display 14";
+
+     padding: 5px 10px;
+
+     background-color: #2b303b;
+
+     color: #ffffff;
+
+}
+
+window {
+
+     border-radius: 8px;
+
+     height: 300px;
+
+     width: 500px;
+
+     padding: 10px;
+
+}
+
+#prompt {
+
+   color: #ffffff;
+
+}
+
+listview {
+
+     padding: 20px 10px 0px 10px;
+
+     spacing: 0.5em;
+
+}
+
+#element selected {
+
+   text-color: #5e81ac;
+
+   font: "SFNS Display 12";
+
+}
