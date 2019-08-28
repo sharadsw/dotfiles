@@ -20,10 +20,10 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'arcticicestudio/nord-vim'
 
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"Plug 'zchee/deoplete-jedi'
-"	let g:deoplete#enable_at_startup = 1
-	
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-jedi'
+	let g:deoplete#enable_at_startup = 1
+
 call plug#end()
 
 filetype plugin on

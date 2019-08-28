@@ -7,7 +7,7 @@ allow_bold = true
 dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
-font = Roboto Mono Medium 12
+font = Roboto Mono Medium 11
 scrollback_lines = 10000
 search_wrap = true
 geometry = 840x600
@@ -37,7 +37,7 @@ filter_unmatched_urls = true
 foreground      = #c0c5ce
 foreground_bold = #dfe1e8
 cursor          = #dfe1e8
-background      = #2b303b
+background      = rgba(43, 48, 59, 0.8)
 
 # 16 color space
 

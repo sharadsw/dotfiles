@@ -7,12 +7,12 @@
 rounded = 0
 border_width = 0
 border_sides = TBLR
-background_color = #2b303b 85
-border_color = #2b303b 30
-background_color_hover = #2b303b 60
-border_color_hover = #2b303b 30
-background_color_pressed = #2b303b 60
-border_color_pressed = #2b303b 30
+background_color = #2b303b 30
+border_color = #2b303b 0
+background_color_hover = #2b303b 0
+border_color_hover = #2b303b 0
+background_color_pressed = #2b303b 0
+border_color_pressed = #2b303b 0
 
 # Background 2: Iconified task
 rounded = 0
@@ -28,11 +28,11 @@ border_color_pressed = #666666 100
 # Background 3: Active task
 rounded = 0
 border_width = 1
-border_sides = 
-background_color = #2b303b 100
-border_color = #ffffff 100
+border_sides = B
+background_color = #2b303b 0
+border_color = #5e81ac 100
 background_color_hover = #aaaaaa 0
-border_color_hover = #ffffff 100
+border_color_hover = #5e81ac 50
 background_color_pressed = #555555 0
 border_color_pressed = #ffffff 100
 
