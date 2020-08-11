@@ -7,7 +7,7 @@
 rounded = 0
 border_width = 0
 border_sides = TBLR
-background_color = #2b303b 30
+background_color = #2b303b 70
 border_color = #2b303b 0
 background_color_hover = #2b303b 0
 border_color_hover = #2b303b 0
@@ -27,7 +27,7 @@ border_color_pressed = #666666 100
 
 # Background 3: Active task
 rounded = 0
-border_width = 1
+border_width = 2
 border_sides = B
 background_color = #2b303b 0
 border_color = #5e81ac 100
@@ -111,9 +111,9 @@ task_text = 1
 task_icon = 0
 task_centered = 1
 urgent_nb_of_blink = 100000
-task_maximum_size = 180 50
+task_maximum_size = 150 10
 task_padding = 12 4 4
-task_font = SFNS Display 11
+task_font = SF Pro Display Medium 10
 task_tooltip = 0
 task_font_color = #ffffff 60
 task_active_font_color = #ffffff 100
@@ -141,7 +141,7 @@ systray_monitor = 1
 # Clock
 time1_format =    %a %b %d       %I:%M %p     
 time2_format = 
-time1_font = SFNS Display 11
+time1_font = SF Pro Display Medium 10
 time1_timezone = 
 time2_timezone = 
 clock_font_color = #ffffff 100
@@ -169,7 +169,7 @@ execp_rclick_command = playerctl next
 execp_mclick_command = playerctl previous
 execp_uwheel_command = 
 execp_dwheel_command = 
-execp_font = SFNS Display 11
+execp_font = SF Pro Display Medium 10
 execp_font_color = #ffffff 100
 execp_padding = 4 0
 execp_background_id = 0
@@ -185,7 +185,7 @@ tooltip_hide_timeout = 0.0
 tooltip_padding = 8 8
 tooltip_background_id = 1
 tooltip_font_color = #ffffff 100
-tooltip_font = SFNS Display 11
+tooltip_font = SF Pro Display Medium 10
 
 #-------------------------------------
 # Separator

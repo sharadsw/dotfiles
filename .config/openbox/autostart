@@ -1,8 +1,7 @@
 nitrogen --restore
-compton &
+picom --experimental-backends &
 tint2 &
 pa-applet &
 nm-applet &
-lxqt-policykit &
-xfce4-power-manager &
+lxpolkit &
 redshift &
