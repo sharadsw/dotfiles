@@ -1,9 +1,12 @@
 # Colours
-window.active.title.bg.color: #2eb398
-window.inactive.title.bg.color: #6ba191
+# Dark: #353c4a
+# yellow: #ebcb8b
+# green: #a3be8c
+# red: #bf616a
+window.active.title.bg.color: #353c4a
+window.inactive.title.bg.color: #353c4a
 window.active.label.text.color: #f0f0f0
 window.inactive.label.text.color: #f0f0f0
-window.*.button.*.image.color: #f0f0f0
 
 # Hide bloat
 window.handle.width: 0
@@ -17,5 +20,29 @@ window.*.title.bg: Solid Flat
 window.*.*.bg: Parentrelative
 
 # Padding
-padding.width: 9
-padding.height: 9
+padding.width: 10
+padding.height: 12
+
+# Close button
+window.active.button.close.unpressed.image.color: #cc575d
+window.active.button.close.pressed.image.color: #cc575d
+window.active.button.close.hover.image.color: #f2676e
+window.inactive.button.close.hover.image.color: #f2676e
+window.inactive.button.close.unpressed.image.color: #cc575d
+window.inactive.button.close.pressed.image.color: #cc575d
+
+# Max button
+window.active.button.max.unpressed.image.color: #a3be8c
+window.active.button.max.pressed.image.color: #a3be8c
+window.active.button.max.hover.image.color: #C4E4A8
+window.inactive.button.max.hover.image.color: #C4E4A8
+window.inactive.button.max.unpressed.image.color: #a3be8c
+window.inactive.button.max.pressed.image.color: #a3be8c
+
+# Iconify button
+window.active.button.iconify.unpressed.image.color: #ebcb8b
+window.active.button.iconify.pressed.image.color: #ebcb8b
+window.active.button.iconify.hover.image.color: #ffdc97
+window.inactive.button.iconify.hover.image.color: #ffdc97
+window.inactive.button.iconify.unpressed.image.color: #ebcb8b
+window.inactive.button.iconify.pressed.image.color: #ebcb8b

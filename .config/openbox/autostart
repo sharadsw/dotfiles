@@ -1,7 +1,7 @@
 nitrogen --restore
-picom --experimental-backends &
+picom &
 tint2 &
 pa-applet &
 nm-applet &
-lxpolkit &
-redshift &
+lxqt-policykit-agent &
+redshift-gtk &
